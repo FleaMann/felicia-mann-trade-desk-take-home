@@ -1,0 +1,50 @@
+@import '../../../main';
+
+.recommendations {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .recommendations_list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .reco_item {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .reco_text {
+    display: flex;
+    overflow-y: auto;
+  }
+
+  .recommendations__single {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    max-height: 350px;
+    padding: 8px;
+    margin: 8px 8px 6px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    text-align: center;
+
+    button {
+      margin: 8px;
+    }
+  }
+
+  .add_reco {
+
+    .add_reco_textarea textarea {
+      padding: 16px;
+      margin: 8px 8px;
+      border: 1px solid #eee;
+      box-shadow: 0 2px 3px #ccc;
+    }
+
+  }
+}

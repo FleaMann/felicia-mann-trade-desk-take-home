@@ -1,0 +1,90 @@
+@import '../main.scss';
+
+.myapplication {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  min-width: 600px;
+
+  $site-margin: 48px;
+
+  .header {
+    background: $color-darkblue;
+    height: $site-margin;
+    padding-left: $site-margin;
+    padding-right: $site-margin;
+    align-items: center;
+    display: flex;
+    color: white;
+    font-size: 18px;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0px;
+    color: darkturquoise;
+    font-family: cursive;
+  }
+
+  .content {
+    .body {
+      margin-top: $site-margin / 2;
+      padding-left: $site-margin;
+      padding-right: $site-margin;
+    }
+  }
+
+  label {
+    display: block;
+  }
+
+  .tabs {
+    display: flex;
+    flex-direction: row;
+
+    padding-left: $site-margin;
+    padding-right: $site-margin;
+
+    border-bottom: 1px solid silver;
+
+    .tab {
+
+      display: block;
+      height: 20px;
+
+      margin-right: 24px;
+      padding-top: 8px;
+      padding-bottom: 6px;
+      cursor: hand;
+
+      border-bottom: 4px solid transparent;
+
+      &.selected {
+        cursor: default;
+        border-bottom-color: black;
+      }
+
+      &:hover:not(.selected) {
+        border-bottom-color: silver;
+      }
+    }
+  }
+
+  button {
+    height: 30px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: $color-darkblue;
+    color: white;
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-align: center;
+    transition: all 0.2s;
+
+    :hover, :focus {
+      background-color: darken($color-darkblue, 5%);
+    }
+  }
+}
